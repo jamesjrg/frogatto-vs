@@ -35,18 +35,20 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <TargetName>$(ProjectName)_debug</TargetName>
+    <OutDir>$(SolutionDir)stage\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)stage\</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions);DISABLE_FORMULA_PROFILER</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>C:\Users\james\dev\cpp lib\glew-1.7.0\include;C:\Users\james\dev\cpp lib\SDL_ttf-2.0.11\include;C:\Users\james\dev\cpp lib\boost_1_48_0;C:\Users\james\dev\cpp lib\SDL-1.2.15\include;C:\Users\james\dev\cpp lib\SDL_mixer-1.2.12\include;C:\Users\james\dev\cpp lib\SDL_image-1.2.12\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\james\dev\cpp lib\glew-1.7.0\include;C:\Users\james\dev\cpp lib\SDL_ttf-2.0.11\include;C:\Users\james\dev\cpp lib\boost_1_47;C:\Users\james\dev\cpp lib\SDL-1.2.15\include;C:\Users\james\dev\cpp lib\SDL_mixer-1.2.12\include;C:\Users\james\dev\cpp lib\SDL_image-1.2.12\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4018;4244</DisableSpecificWarnings>
     </ClCompile>
     <Link>
@@ -56,8 +58,10 @@
       <EntryPointSymbol>
       </EntryPointSymbol>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
-      <AdditionalDependencies>opengl32.lib;glu32.lib;sdl.lib;sdlmain.lib;sdl_image.lib;sdl_mixer.lib;sdl_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:\Users\james\dev\cpp lib\boost_1_48_0\stage\lib;C:\Users\james\dev\cpp lib\SDL_mixer-1.2.12\lib\x86;C:\Users\james\dev\cpp lib\SDL_ttf-2.0.11\lib\x86;C:\Users\james\dev\cpp lib\SDL-1.2.15\lib\x86;C:\Users\james\dev\cpp lib\SDL_image-1.2.12\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;glew32.lib;sdl.lib;sdlmain.lib;sdl_image.lib;sdl_mixer.lib;sdl_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\james\dev\cpp lib\glew-1.7.0\lib;C:\Users\james\dev\cpp lib\boost_1_47\lib;C:\Users\james\dev\cpp lib\SDL_mixer-1.2.12\lib\x86;C:\Users\james\dev\cpp lib\SDL_ttf-2.0.11\lib\x86;C:\Users\james\dev\cpp lib\SDL-1.2.15\lib\x86;C:\Users\james\dev\cpp lib\SDL_image-1.2.12\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>
+      </IgnoreSpecificDefaultLibraries>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -66,7 +70,7 @@
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <AdditionalIncludeDirectories>C:\Users\james\dev\cpp lib\glew-1.7.0\include;C:\Users\james\dev\cpp lib\SDL_ttf-2.0.11\include;C:\Users\james\dev\cpp lib\boost_1_48_0;C:\Users\james\dev\cpp lib\SDL-1.2.15\include;C:\Users\james\dev\cpp lib\SDL_mixer-1.2.12\include;C:\Users\james\dev\cpp lib\SDL_image-1.2.12\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\james\dev\cpp lib\glew-1.7.0\include;C:\Users\james\dev\cpp lib\SDL_ttf-2.0.11\include;C:\Users\james\dev\cpp lib\boost_1_47;C:\Users\james\dev\cpp lib\SDL-1.2.15\include;C:\Users\james\dev\cpp lib\SDL_mixer-1.2.12\include;C:\Users\james\dev\cpp lib\SDL_image-1.2.12\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <TargetMachine>MachineX86</TargetMachine>
@@ -76,8 +80,8 @@
       <OptimizeReferences>true</OptimizeReferences>
       <EntryPointSymbol>
       </EntryPointSymbol>
-      <AdditionalDependencies>opengl32.lib;glu32.lib;sdl.lib;sdlmain.lib;sdl_image.lib;sdl_mixer.lib;sdl_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:\Users\james\dev\cpp lib\boost_1_48_0\stage\lib;C:\Users\james\dev\cpp lib\SDL_mixer-1.2.12\lib\x86;C:\Users\james\dev\cpp lib\SDL_ttf-2.0.11\lib\x86;C:\Users\james\dev\cpp lib\SDL-1.2.15\lib\x86;C:\Users\james\dev\cpp lib\SDL_image-1.2.12\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;glew32.lib;sdl.lib;sdlmain.lib;sdl_image.lib;sdl_mixer.lib;sdl_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\james\dev\cpp lib\glew-1.7.0\lib;C:\Users\james\dev\cpp lib\boost_1_47\lib;C:\Users\james\dev\cpp lib\SDL_mixer-1.2.12\lib\x86;C:\Users\james\dev\cpp lib\SDL_ttf-2.0.11\lib\x86;C:\Users\james\dev\cpp lib\SDL-1.2.15\lib\x86;C:\Users\james\dev\cpp lib\SDL_image-1.2.12\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -174,7 +178,6 @@
     <ClCompile Include="src\scrollable_widget.cpp" />
     <ClCompile Include="src\scrollbar_widget.cpp" />
     <ClCompile Include="src\segment_editor_dialog.cpp" />
-    <ClCompile Include="src\server.cpp" />
     <ClCompile Include="src\settings_dialog.cpp" />
     <ClCompile Include="src\simple_wml.cpp" />
     <ClCompile Include="src\slider.cpp" />

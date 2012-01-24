@@ -106,7 +106,11 @@ namespace preferences {
 		bool sim_iphone_ = false;
 
 #ifndef PREFERENCES_PATH
+#ifdef _WIN32
+#define PREFERENCES_PATH ""
+#else
 #define PREFERENCES_PATH "~/.frogatto/"
+#endif
 #endif
 		bool screen_rotated_ = false;
 		

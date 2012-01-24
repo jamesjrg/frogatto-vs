@@ -13,6 +13,7 @@
 #include <cassert>
 #include <cctype>
 #include <iostream>
+#include <locale>
 #include <map>
 #include <set>
 #include <stack>
@@ -213,6 +214,7 @@ std::string parse_value(std::string::const_iterator& i1,
 {
 	line_starts_at = line_number;
 	std::string res;
+	std::locale loc;
 	const std::string::const_iterator beg = i1;
 	while(i1 != i2 && !util::isnewline(*i1) && *i1 != '#') {
 		if(*i1 == '"') {
@@ -255,7 +257,7 @@ std::string parse_value(std::string::const_iterator& i1,
 	{
 		int newlines = 0;
 		std::string::iterator i = res.begin();
-		while(i != res.end() && isspace(*i)) {
+		while(i != res.end() && isspace(*i, loc)) {
 			if(*i == '\n') {
 				++newlines;
 			}
@@ -264,7 +266,7 @@ std::string parse_value(std::string::const_iterator& i1,
 
 		if(i != res.end()) {
 			res.erase(res.begin(), i);
-			while(isspace(res[res.size()-1])) {
+			while(isspace(res[res.size()-1], loc)) {
 				res.resize(res.size()-1);
 			}
 
@@ -315,6 +317,7 @@ node_ptr parse_wml_internal(const std::string& error_context, const std::string&
 	schemas.push(NULL);
 	std::string::const_iterator i = doc.begin();
 	std::string current_comment;
+	std::locale loc;
 	int line_number = 1;
 
 	const std::string* filename_ptr = filename_pool.get(error_context);
@@ -329,7 +332,7 @@ node_ptr parse_wml_internal(const std::string& error_context, const std::string&
 		if(util::isnewline(*i)) {
 			++i;
 			++line_number;
-		} else if(isspace(*i)) {
+		} else if(isspace(*i, loc)) {
 			++i;
 		} else if(*i == '[') {
 			const std::string::const_iterator begin_element = i;
@@ -435,7 +438,7 @@ node_ptr parse_wml_internal(const std::string& error_context, const std::string&
 
 					el.reset(new node(std::string(element.begin(),template_name)));
 
-					while(template_name != element.end() && isspace(*template_name)) {
+					while(template_name != element.end() && isspace(*template_name, loc)) {
 						++template_name;
 					}
 
@@ -508,7 +511,7 @@ node_ptr parse_wml_internal(const std::string& error_context, const std::string&
 		} else if(*i == '@') {
 			++i;
 			std::string::const_iterator begin = i;
-			while(i != doc.end() && !isspace(*i) && !util::isnewline(*i)) {
+			while(i != doc.end() && !isspace(*i, loc) && !util::isnewline(*i)) {
 				++i;
 			}
 
@@ -520,7 +523,7 @@ node_ptr parse_wml_internal(const std::string& error_context, const std::string&
 
 				++i;
 				begin = i;
-				while(i != doc.end() && !isspace(*i) && !util::isnewline(*i)) {
+				while(i != doc.end() && !isspace(*i, loc) && !util::isnewline(*i)) {
 					++i;
 				}
 
@@ -571,6 +574,7 @@ node_ptr parse_wml(const std::string& doc, bool must_have_doc, const schema* sch
 node_ptr parse_wml_from_file(const std::string& fname, const schema* schema, bool must_have_doc)
 {
 	const std::string data = preprocess(sys::read_file(fname));
+	std::locale loc;
 	if(data.empty()) {
 		ASSERT_LOG(false, "Could not read file: " << fname);
 	}
@@ -583,7 +587,7 @@ node_ptr parse_wml_from_file(const std::string& fname, const schema* schema, boo
 				--i1;
 			}
 
-			while(i1 != e.error_loc && isspace(*i1)) {
+			while(i1 != e.error_loc && isspace(*i1, loc)) {
 				++i1;
 			}
 

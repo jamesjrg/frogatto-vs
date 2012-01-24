@@ -183,9 +183,6 @@
     <ClCompile Include="src\inventory.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\iphone_controls.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\joystick.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -292,9 +289,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\segment_editor_dialog.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\server.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\settings_dialog.cpp">
@@ -418,6 +412,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\wml_writer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\iphone_controls.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
