@@ -65,6 +65,7 @@ frogatto.vcxproj.user
 release
 
 #other unversioned files
+frogatto_msvc_bin
 preferences.cfg
 stage
 stats
