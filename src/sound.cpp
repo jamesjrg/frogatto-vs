@@ -2,8 +2,6 @@
 #include <map>
 #include <vector>
 
-#include <pthread.h>
-
 #include <boost/shared_ptr.hpp>
 
 #include "preferences.hpp"

@@ -2,15 +2,14 @@
 #ifndef SDL_VIDEO_OPENGL_ES
 #include <GL/glew.h>
 #endif
-#if defined(TARGET_OS_HARMATTAN) || defined(TARGET_PANDORA) || defined(TARGET_TEGRA)
-#include <GLES/gl.h>
+
+#include "gl.hpp"
 #ifdef TARGET_PANDORA
 #include <GLES/glues.h>
-#endif
 #else
-#include <GL/gl.h>
 #include <GL/glu.h>
 #endif
+
 #if defined(__APPLE__) && !(TARGET_IPHONE_SIMULATOR || TARGET_OS_IPHONE)
 #include <OpenGL/OpenGL.h>
 #endif

@@ -1,12 +1,8 @@
 #include <sstream>
 #include <string>
 #include <vector>
-#if defined(TARGET_OS_HARMATTAN) || defined(TARGET_PANDORA) || defined(TARGET_TEGRA)
-#include <GLES/gl.h>
-#else
-#include <GL/gl.h>
-#endif
 
+#include "gl.hpp"
 #include "color_utils.hpp"
 #include "string_utils.hpp"
 #include "unit_test.hpp"

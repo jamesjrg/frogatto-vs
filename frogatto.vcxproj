@@ -34,6 +34,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <TargetName>$(ProjectName)_debug</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>true</LinkIncremental>
@@ -45,12 +46,18 @@
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>C:\Users\james\dev\cpp lib\boost_1_48_0\boost;C:\Users\james\dev\cpp lib\SDL-1.2.15\include;C:\Users\james\dev\cpp lib\SDL_mixer-1.2.12\include;C:\Users\james\dev\cpp lib\SDL_image-1.2.12\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\james\dev\cpp lib\glew-1.7.0\include;C:\Users\james\dev\cpp lib\SDL_ttf-2.0.11\include;C:\Users\james\dev\cpp lib\boost_1_48_0;C:\Users\james\dev\cpp lib\SDL-1.2.15\include;C:\Users\james\dev\cpp lib\SDL_mixer-1.2.12\include;C:\Users\james\dev\cpp lib\SDL_image-1.2.12\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4018;4244</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <TargetMachine>MachineX86</TargetMachine>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
+      <EntryPointSymbol>
+      </EntryPointSymbol>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;sdl.lib;sdlmain.lib;sdl_image.lib;sdl_mixer.lib;sdl_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\james\dev\cpp lib\boost_1_48_0\stage\lib;C:\Users\james\dev\cpp lib\SDL_mixer-1.2.12\lib\x86;C:\Users\james\dev\cpp lib\SDL_ttf-2.0.11\lib\x86;C:\Users\james\dev\cpp lib\SDL-1.2.15\lib\x86;C:\Users\james\dev\cpp lib\SDL_image-1.2.12\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -59,13 +66,18 @@
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalIncludeDirectories>C:\Users\james\dev\cpp lib\glew-1.7.0\include;C:\Users\james\dev\cpp lib\SDL_ttf-2.0.11\include;C:\Users\james\dev\cpp lib\boost_1_48_0;C:\Users\james\dev\cpp lib\SDL-1.2.15\include;C:\Users\james\dev\cpp lib\SDL_mixer-1.2.12\include;C:\Users\james\dev\cpp lib\SDL_image-1.2.12\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <TargetMachine>MachineX86</TargetMachine>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <EntryPointSymbol>
+      </EntryPointSymbol>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;sdl.lib;sdlmain.lib;sdl_image.lib;sdl_mixer.lib;sdl_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\james\dev\cpp lib\boost_1_48_0\stage\lib;C:\Users\james\dev\cpp lib\SDL_mixer-1.2.12\lib\x86;C:\Users\james\dev\cpp lib\SDL_ttf-2.0.11\lib\x86;C:\Users\james\dev\cpp lib\SDL-1.2.15\lib\x86;C:\Users\james\dev\cpp lib\SDL_image-1.2.12\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -99,8 +111,6 @@
     <ClCompile Include="src\editor_level_properties_dialog.cpp" />
     <ClCompile Include="src\editor_stats_dialog.cpp" />
     <ClCompile Include="src\editor_variable_info.cpp" />
-    <ClCompile Include="src\eglport-tegra.c" />
-    <ClCompile Include="src\eglport.c" />
     <ClCompile Include="src\entity.cpp" />
     <ClCompile Include="src\filesystem.cpp" />
     <ClCompile Include="src\font.cpp" />
@@ -108,7 +118,6 @@
     <ClCompile Include="src\formula_callable_definition.cpp" />
     <ClCompile Include="src\formula_constants.cpp" />
     <ClCompile Include="src\formula_function.cpp" />
-    <ClCompile Include="src\formula_profiler.cpp" />
     <ClCompile Include="src\formula_test.cpp" />
     <ClCompile Include="src\formula_tokenizer.cpp" />
     <ClCompile Include="src\formula_variable_storage.cpp" />
@@ -141,7 +150,6 @@
     <ClCompile Include="src\light.cpp" />
     <ClCompile Include="src\loading_screen.cpp" />
     <ClCompile Include="src\load_level.cpp" />
-    <ClCompile Include="src\load_level_nothread.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\message_dialog.cpp" />
     <ClCompile Include="src\movement_script.cpp" />
@@ -232,6 +240,7 @@
     <ClInclude Include="src\custom_object_type.hpp" />
     <ClInclude Include="src\debug_console.hpp" />
     <ClInclude Include="src\decimal.hpp" />
+    <ClInclude Include="src\windows_helpers.hpp" />
     <ClInclude Include="src\dialog.hpp" />
     <ClInclude Include="src\draw_number.hpp" />
     <ClInclude Include="src\draw_scene.hpp" />
@@ -243,7 +252,6 @@
     <ClInclude Include="src\editor_level_properties_dialog.hpp" />
     <ClInclude Include="src\editor_stats_dialog.hpp" />
     <ClInclude Include="src\editor_variable_info.hpp" />
-    <ClInclude Include="src\eglport.h" />
     <ClInclude Include="src\entity.hpp" />
     <ClInclude Include="src\entity_fwd.hpp" />
     <ClInclude Include="src\filesystem.hpp" />
@@ -266,6 +274,7 @@
     <ClInclude Include="src\functional.hpp" />
     <ClInclude Include="src\game_registry.hpp" />
     <ClInclude Include="src\geometry.hpp" />
+    <ClInclude Include="src\gl.hpp" />
     <ClInclude Include="src\globals.h" />
     <ClInclude Include="src\graphical_font.hpp" />
     <ClInclude Include="src\graphical_font_label.hpp" />

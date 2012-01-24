@@ -5,7 +5,11 @@
 #endif
 
 #include <assert.h>
+#ifdef _MSC_VER
+#include <boost/cstdint.hpp>
+#else
 #include <inttypes.h>
+#endif
 
 #include <stdio.h>
 

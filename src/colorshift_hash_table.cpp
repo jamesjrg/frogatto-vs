@@ -1,5 +1,9 @@
 #include <algorithm>
+#ifdef _MSC_VER
+#include <boost/cstdint.hpp>
+#else
 #include <inttypes.h>
+#endif
 
 #include "asserts.hpp"
 #include "colorshift_hash_table.hpp"

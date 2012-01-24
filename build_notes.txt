@@ -1,0 +1,17 @@
+downloaded and extracted:
+boost
+glew
+sdl
+sdl_image
+sdl_mixer
+sdl_ttf
+zlib
+
+building boost:
+b2.exe variant=debug,release --with-thread stage
+b2.exe variant=debug,release --with-regex stage
+b2.exe variant=debug,release --with-system stage
+b2.exe variant=debug,release --with-date_time stage
+b2.exe variant=debug,release -s ZLIB_INCLUDE=C:\Users\james\dev\cpplib\zlib\include -s ZLIB_LIBPATH=C:\Users\james\dev\cpplib\zlib\lib --with-iostreams stage
+
+

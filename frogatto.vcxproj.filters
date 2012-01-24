@@ -126,9 +126,6 @@
     <ClCompile Include="src\formula_function.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\formula_profiler.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\formula_test.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -223,9 +220,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\load_level.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\load_level_nothread.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\main.cpp">
@@ -426,18 +420,9 @@
     <ClCompile Include="src\wml_writer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\eglport-tegra.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\eglport.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Appirater.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\eglport.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\globals.h">
@@ -909,6 +894,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\wml_writer.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gl.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\windows_helpers.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

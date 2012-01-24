@@ -1,6 +1,10 @@
 #include <iostream>
 #include <deque>
+#ifdef _MSC_VER
+#include <boost/cstdint.hpp>
+#else
 #include <inttypes.h>
+#endif
 #include <math.h>
 
 #include "asserts.hpp"

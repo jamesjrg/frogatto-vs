@@ -31,12 +31,8 @@
 #endif
 
 #include <stdlib.h>
-#include <SDL/SDL.h>
-#if defined(TARGET_OS_HARMATTAN) || defined(TARGET_PANDORA) || defined(TARGET_TEGRA)
-#include <GLES/gl.h>
-#else
-#include <GL/gl.h>
-#endif
+#include <SDL.h>
+#include "gl.hpp"
 
 #include <string>
 

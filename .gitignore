@@ -52,7 +52,7 @@ pull-v
 Rakefile
 README
 rpg
-SConsturct
+SConstruct
 surface_scaling.cfg
 
 #created by Visual Studio

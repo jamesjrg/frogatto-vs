@@ -22,6 +22,7 @@
 #include "formula_function.hpp"
 #include "string_utils.hpp"
 #include "unit_test.hpp"
+#include "windows_helpers.hpp"
 
 #include "SDL.h"
 #include <boost/regex.hpp>

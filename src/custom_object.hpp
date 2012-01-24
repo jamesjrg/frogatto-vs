@@ -2,7 +2,12 @@
 #define CUSTOM_OBJECT_HPP_INCLUDED
 
 #include <boost/shared_ptr.hpp>
+#ifdef _MSC_VER
+#include <boost/cstdint.hpp>
+#else
 #include <inttypes.h>
+#endif
+
 #include <stack>
 
 #include "blur.hpp"

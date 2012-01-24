@@ -1,10 +1,13 @@
 #include <sstream>
 #include <string>
 
+#ifdef _MSC_VER
+#include <boost/cstdint.hpp>
+#else
 #include <inttypes.h>
+#endif
 #include <numeric>
 #include <stdio.h>
-#include <unistd.h>
 
 #include <boost/asio.hpp>
 #include <boost/regex.hpp>

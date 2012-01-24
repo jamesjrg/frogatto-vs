@@ -11,7 +11,11 @@
 #include <vector>
 
 #include <iostream>
+#ifdef _MSC_VER
+#include <boost/cstdint.hpp>
+#else
 #include <inttypes.h>
+#endif
 
 #include "asserts.hpp"
 #include "foreach.hpp"

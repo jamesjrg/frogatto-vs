@@ -2,11 +2,7 @@
 #define COLOR_UTILS_HPP_INCLUDED
 
 #include "SDL.h"
-#if defined(TARGET_OS_HARMATTAN) || defined(TARGET_PANDORA) || defined(TARGET_TEGRA)
-#include <GLES/gl.h>
-#else
-#include <GL/gl.h>
-#endif
+#include "gl.hpp"
 
 #include <string>
 #include <vector>

@@ -41,6 +41,7 @@
 #include "wml_utils.hpp"
 #include "wml_writer.hpp"
 #include "color_utils.hpp"
+#include "windows_helpers.hpp"
 
 namespace {
 boost::intrusive_ptr<level> current_level;
