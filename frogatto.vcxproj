@@ -1,0 +1,376 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>C:\Users\james\dev\cpp lib\boost_1_48_0\boost;C:\Users\james\dev\cpp lib\SDL-1.2.15\include;C:\Users\james\dev\cpp lib\SDL_mixer-1.2.12\include;C:\Users\james\dev\cpp lib\SDL_image-1.2.12\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\achievements.cpp" />
+    <ClCompile Include="src\background.cpp" />
+    <ClCompile Include="src\blur.cpp" />
+    <ClCompile Include="src\border_widget.cpp" />
+    <ClCompile Include="src\button.cpp" />
+    <ClCompile Include="src\character_editor_dialog.cpp" />
+    <ClCompile Include="src\checkbox.cpp" />
+    <ClCompile Include="src\collision_utils.cpp" />
+    <ClCompile Include="src\colorshift_hash_table.cpp" />
+    <ClCompile Include="src\color_utils.cpp" />
+    <ClCompile Include="src\controls.cpp" />
+    <ClCompile Include="src\controls_dialog.cpp" />
+    <ClCompile Include="src\current_generator.cpp" />
+    <ClCompile Include="src\custom_object.cpp" />
+    <ClCompile Include="src\custom_object_callable.cpp" />
+    <ClCompile Include="src\custom_object_functions.cpp" />
+    <ClCompile Include="src\custom_object_type.cpp" />
+    <ClCompile Include="src\debug_console.cpp" />
+    <ClCompile Include="src\decimal.cpp" />
+    <ClCompile Include="src\dialog.cpp" />
+    <ClCompile Include="src\draw_number.cpp" />
+    <ClCompile Include="src\draw_scene.cpp" />
+    <ClCompile Include="src\draw_tile.cpp" />
+    <ClCompile Include="src\editor.cpp" />
+    <ClCompile Include="src\editor_dialogs.cpp" />
+    <ClCompile Include="src\editor_formula_functions.cpp" />
+    <ClCompile Include="src\editor_layers_dialog.cpp" />
+    <ClCompile Include="src\editor_level_properties_dialog.cpp" />
+    <ClCompile Include="src\editor_stats_dialog.cpp" />
+    <ClCompile Include="src\editor_variable_info.cpp" />
+    <ClCompile Include="src\eglport-tegra.c" />
+    <ClCompile Include="src\eglport.c" />
+    <ClCompile Include="src\entity.cpp" />
+    <ClCompile Include="src\filesystem.cpp" />
+    <ClCompile Include="src\font.cpp" />
+    <ClCompile Include="src\formula.cpp" />
+    <ClCompile Include="src\formula_callable_definition.cpp" />
+    <ClCompile Include="src\formula_constants.cpp" />
+    <ClCompile Include="src\formula_function.cpp" />
+    <ClCompile Include="src\formula_profiler.cpp" />
+    <ClCompile Include="src\formula_test.cpp" />
+    <ClCompile Include="src\formula_tokenizer.cpp" />
+    <ClCompile Include="src\formula_variable_storage.cpp" />
+    <ClCompile Include="src\frame.cpp" />
+    <ClCompile Include="src\framed_gui_element.cpp" />
+    <ClCompile Include="src\game_registry.cpp" />
+    <ClCompile Include="src\geometry.cpp" />
+    <ClCompile Include="src\globals.cpp" />
+    <ClCompile Include="src\graphical_font.cpp" />
+    <ClCompile Include="src\graphical_font_label.cpp" />
+    <ClCompile Include="src\grid_widget.cpp" />
+    <ClCompile Include="src\group_property_editor_dialog.cpp" />
+    <ClCompile Include="src\gui_formula_functions.cpp" />
+    <ClCompile Include="src\gui_section.cpp" />
+    <ClCompile Include="src\i18n.cpp" />
+    <ClCompile Include="src\image_widget.cpp" />
+    <ClCompile Include="src\IMG_savepng.cpp" />
+    <ClCompile Include="src\input.cpp" />
+    <ClCompile Include="src\inventory.cpp" />
+    <ClCompile Include="src\iphone_controls.cpp" />
+    <ClCompile Include="src\joystick.cpp" />
+    <ClCompile Include="src\key.cpp" />
+    <ClCompile Include="src\key_button.cpp" />
+    <ClCompile Include="src\label.cpp" />
+    <ClCompile Include="src\level.cpp" />
+    <ClCompile Include="src\level_logic.cpp" />
+    <ClCompile Include="src\level_object.cpp" />
+    <ClCompile Include="src\level_runner.cpp" />
+    <ClCompile Include="src\level_solid_map.cpp" />
+    <ClCompile Include="src\light.cpp" />
+    <ClCompile Include="src\loading_screen.cpp" />
+    <ClCompile Include="src\load_level.cpp" />
+    <ClCompile Include="src\load_level_nothread.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\message_dialog.cpp" />
+    <ClCompile Include="src\movement_script.cpp" />
+    <ClCompile Include="src\multiplayer.cpp" />
+    <ClCompile Include="src\multi_tile_pattern.cpp" />
+    <ClCompile Include="src\object_events.cpp" />
+    <ClCompile Include="src\options_dialog.cpp" />
+    <ClCompile Include="src\package.cpp" />
+    <ClCompile Include="src\particle_system.cpp" />
+    <ClCompile Include="src\pause_game_dialog.cpp" />
+    <ClCompile Include="src\playable_custom_object.cpp" />
+    <ClCompile Include="src\player_info.cpp" />
+    <ClCompile Include="src\powerup.cpp" />
+    <ClCompile Include="src\preferences.cpp" />
+    <ClCompile Include="src\preprocessor.cpp" />
+    <ClCompile Include="src\preview_tileset_widget.cpp" />
+    <ClCompile Include="src\property_editor_dialog.cpp" />
+    <ClCompile Include="src\random.cpp" />
+    <ClCompile Include="src\raster.cpp" />
+    <ClCompile Include="src\raster_distortion.cpp" />
+    <ClCompile Include="src\rectangle_rotator.cpp" />
+    <ClCompile Include="src\scrollable_widget.cpp" />
+    <ClCompile Include="src\scrollbar_widget.cpp" />
+    <ClCompile Include="src\segment_editor_dialog.cpp" />
+    <ClCompile Include="src\server.cpp" />
+    <ClCompile Include="src\settings_dialog.cpp" />
+    <ClCompile Include="src\simple_wml.cpp" />
+    <ClCompile Include="src\slider.cpp" />
+    <ClCompile Include="src\solid_map.cpp" />
+    <ClCompile Include="src\sound.cpp" />
+    <ClCompile Include="src\speech_dialog.cpp" />
+    <ClCompile Include="src\stats.cpp" />
+    <ClCompile Include="src\string_utils.cpp" />
+    <ClCompile Include="src\surface.cpp" />
+    <ClCompile Include="src\surface_cache.cpp" />
+    <ClCompile Include="src\surface_formula.cpp" />
+    <ClCompile Include="src\surface_palette.cpp" />
+    <ClCompile Include="src\surface_scaling.cpp" />
+    <ClCompile Include="src\texture.cpp" />
+    <ClCompile Include="src\texture_frame_buffer.cpp" />
+    <ClCompile Include="src\text_entry_widget.cpp" />
+    <ClCompile Include="src\thread.cpp" />
+    <ClCompile Include="src\tileset_editor_dialog.cpp" />
+    <ClCompile Include="src\tile_map.cpp" />
+    <ClCompile Include="src\tooltip.cpp" />
+    <ClCompile Include="src\translate.cpp" />
+    <ClCompile Include="src\unit_test.cpp" />
+    <ClCompile Include="src\utility_object_compiler.cpp" />
+    <ClCompile Include="src\utility_object_editor.cpp" />
+    <ClCompile Include="src\utility_render_level.cpp" />
+    <ClCompile Include="src\utils.cpp" />
+    <ClCompile Include="src\variant.cpp" />
+    <ClCompile Include="src\water.cpp" />
+    <ClCompile Include="src\water_particle_system.cpp" />
+    <ClCompile Include="src\weather_particle_system.cpp" />
+    <ClCompile Include="src\widget.cpp" />
+    <ClCompile Include="src\wml_formula_adapter.cpp" />
+    <ClCompile Include="src\wml_formula_callable.cpp" />
+    <ClCompile Include="src\wml_modify.cpp" />
+    <ClCompile Include="src\wml_node.cpp" />
+    <ClCompile Include="src\wml_parser.cpp" />
+    <ClCompile Include="src\wml_parser_test.cpp" />
+    <ClCompile Include="src\wml_preprocessor.cpp" />
+    <ClCompile Include="src\wml_schema.cpp" />
+    <ClCompile Include="src\wml_utils.cpp" />
+    <ClCompile Include="src\wml_writer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\achievements.hpp" />
+    <ClInclude Include="src\Appirater.h" />
+    <ClInclude Include="src\asserts.hpp" />
+    <ClInclude Include="src\background.hpp" />
+    <ClInclude Include="src\blur.hpp" />
+    <ClInclude Include="src\border_widget.hpp" />
+    <ClInclude Include="src\button.hpp" />
+    <ClInclude Include="src\character_editor_dialog.hpp" />
+    <ClInclude Include="src\checkbox.hpp" />
+    <ClInclude Include="src\collision_utils.hpp" />
+    <ClInclude Include="src\colorshift_hash_table.hpp" />
+    <ClInclude Include="src\color_utils.hpp" />
+    <ClInclude Include="src\concurrent_cache.hpp" />
+    <ClInclude Include="src\controls.hpp" />
+    <ClInclude Include="src\controls_dialog.hpp" />
+    <ClInclude Include="src\current_generator.hpp" />
+    <ClInclude Include="src\custom_object.hpp" />
+    <ClInclude Include="src\custom_object_callable.hpp" />
+    <ClInclude Include="src\custom_object_functions.hpp" />
+    <ClInclude Include="src\custom_object_type.hpp" />
+    <ClInclude Include="src\debug_console.hpp" />
+    <ClInclude Include="src\decimal.hpp" />
+    <ClInclude Include="src\dialog.hpp" />
+    <ClInclude Include="src\draw_number.hpp" />
+    <ClInclude Include="src\draw_scene.hpp" />
+    <ClInclude Include="src\draw_tile.hpp" />
+    <ClInclude Include="src\editor.hpp" />
+    <ClInclude Include="src\editor_dialogs.hpp" />
+    <ClInclude Include="src\editor_formula_functions.hpp" />
+    <ClInclude Include="src\editor_layers_dialog.hpp" />
+    <ClInclude Include="src\editor_level_properties_dialog.hpp" />
+    <ClInclude Include="src\editor_stats_dialog.hpp" />
+    <ClInclude Include="src\editor_variable_info.hpp" />
+    <ClInclude Include="src\eglport.h" />
+    <ClInclude Include="src\entity.hpp" />
+    <ClInclude Include="src\entity_fwd.hpp" />
+    <ClInclude Include="src\filesystem.hpp" />
+    <ClInclude Include="src\font.hpp" />
+    <ClInclude Include="src\foreach.hpp" />
+    <ClInclude Include="src\formatter.hpp" />
+    <ClInclude Include="src\formula.hpp" />
+    <ClInclude Include="src\formula_callable.hpp" />
+    <ClInclude Include="src\formula_callable_definition.hpp" />
+    <ClInclude Include="src\formula_callable_definition_fwd.hpp" />
+    <ClInclude Include="src\formula_callable_utils.hpp" />
+    <ClInclude Include="src\formula_constants.hpp" />
+    <ClInclude Include="src\formula_function.hpp" />
+    <ClInclude Include="src\formula_fwd.hpp" />
+    <ClInclude Include="src\formula_profiler.hpp" />
+    <ClInclude Include="src\formula_tokenizer.hpp" />
+    <ClInclude Include="src\formula_variable_storage.hpp" />
+    <ClInclude Include="src\frame.hpp" />
+    <ClInclude Include="src\framed_gui_element.hpp" />
+    <ClInclude Include="src\functional.hpp" />
+    <ClInclude Include="src\game_registry.hpp" />
+    <ClInclude Include="src\geometry.hpp" />
+    <ClInclude Include="src\globals.h" />
+    <ClInclude Include="src\graphical_font.hpp" />
+    <ClInclude Include="src\graphical_font_label.hpp" />
+    <ClInclude Include="src\grid_widget.hpp" />
+    <ClInclude Include="src\grid_widget_fwd.hpp" />
+    <ClInclude Include="src\group_property_editor_dialog.hpp" />
+    <ClInclude Include="src\gui_formula_functions.hpp" />
+    <ClInclude Include="src\gui_section.hpp" />
+    <ClInclude Include="src\hi_res_timer.hpp" />
+    <ClInclude Include="src\i18n.hpp" />
+    <ClInclude Include="src\image_widget.hpp" />
+    <ClInclude Include="src\image_widget_fwd.hpp" />
+    <ClInclude Include="src\IMG_savepng.h" />
+    <ClInclude Include="src\input.hpp" />
+    <ClInclude Include="src\inventory.hpp" />
+    <ClInclude Include="src\iphone_controls.hpp" />
+    <ClInclude Include="src\iphone_device_info.h" />
+    <ClInclude Include="src\iphone_sound.h" />
+    <ClInclude Include="src\joystick.hpp" />
+    <ClInclude Include="src\key.hpp" />
+    <ClInclude Include="src\key_button.hpp" />
+    <ClInclude Include="src\label.hpp" />
+    <ClInclude Include="src\level.hpp" />
+    <ClInclude Include="src\level_logic.hpp" />
+    <ClInclude Include="src\level_object.hpp" />
+    <ClInclude Include="src\level_runner.hpp" />
+    <ClInclude Include="src\level_solid_map.hpp" />
+    <ClInclude Include="src\light.hpp" />
+    <ClInclude Include="src\loading_screen.hpp" />
+    <ClInclude Include="src\load_level.hpp" />
+    <ClInclude Include="src\map_utils.hpp" />
+    <ClInclude Include="src\message_dialog.hpp" />
+    <ClInclude Include="src\movement_script.hpp" />
+    <ClInclude Include="src\multiplayer.hpp" />
+    <ClInclude Include="src\multi_tile_pattern.hpp" />
+    <ClInclude Include="src\object_events.hpp" />
+    <ClInclude Include="src\of_bridge.h" />
+    <ClInclude Include="src\options_dialog.hpp" />
+    <ClInclude Include="src\package.hpp" />
+    <ClInclude Include="src\particle_system.hpp" />
+    <ClInclude Include="src\pause_game_dialog.hpp" />
+    <ClInclude Include="src\playable_custom_object.hpp" />
+    <ClInclude Include="src\player_info.hpp" />
+    <ClInclude Include="src\point_map.hpp" />
+    <ClInclude Include="src\powerup.hpp" />
+    <ClInclude Include="src\powerup_fwd.hpp" />
+    <ClInclude Include="src\preferences.hpp" />
+    <ClInclude Include="src\preprocessor.hpp" />
+    <ClInclude Include="src\preview_tileset_widget.hpp" />
+    <ClInclude Include="src\property_editor_dialog.hpp" />
+    <ClInclude Include="src\random.hpp" />
+    <ClInclude Include="src\raster.hpp" />
+    <ClInclude Include="src\raster_distortion.hpp" />
+    <ClInclude Include="src\rectangle_rotator.hpp" />
+    <ClInclude Include="src\reference_counted_object.hpp" />
+    <ClInclude Include="src\regex_utils.hpp" />
+    <ClInclude Include="src\SampleOFDelegate.h" />
+    <ClInclude Include="src\scoped_resource.hpp" />
+    <ClInclude Include="src\scrollable_widget.hpp" />
+    <ClInclude Include="src\scrollbar_widget.hpp" />
+    <ClInclude Include="src\SDLMain.h" />
+    <ClInclude Include="src\segment_editor_dialog.hpp" />
+    <ClInclude Include="src\settings_dialog.hpp" />
+    <ClInclude Include="src\simple_wml.hpp" />
+    <ClInclude Include="src\slider.hpp" />
+    <ClInclude Include="src\solid_map.hpp" />
+    <ClInclude Include="src\solid_map_fwd.hpp" />
+    <ClInclude Include="src\sound.hpp" />
+    <ClInclude Include="src\speech_dialog.hpp" />
+    <ClInclude Include="src\stats.hpp" />
+    <ClInclude Include="src\string_utils.hpp" />
+    <ClInclude Include="src\surface.hpp" />
+    <ClInclude Include="src\surface_cache.hpp" />
+    <ClInclude Include="src\surface_formula.hpp" />
+    <ClInclude Include="src\surface_palette.hpp" />
+    <ClInclude Include="src\surface_scaling_generated.hpp" />
+    <ClInclude Include="src\texture.hpp" />
+    <ClInclude Include="src\texture_frame_buffer.hpp" />
+    <ClInclude Include="src\text_entry_widget.hpp" />
+    <ClInclude Include="src\thread.hpp" />
+    <ClInclude Include="src\tileset_editor_dialog.hpp" />
+    <ClInclude Include="src\tile_map.hpp" />
+    <ClInclude Include="src\tooltip.hpp" />
+    <ClInclude Include="src\translate.hpp" />
+    <ClInclude Include="src\unit_test.hpp" />
+    <ClInclude Include="src\userevents.h" />
+    <ClInclude Include="src\utils.hpp" />
+    <ClInclude Include="src\variant.hpp" />
+    <ClInclude Include="src\water.hpp" />
+    <ClInclude Include="src\water_particle_system.hpp" />
+    <ClInclude Include="src\weather_particle_system.hpp" />
+    <ClInclude Include="src\widget.hpp" />
+    <ClInclude Include="src\wml_formula_adapter.hpp" />
+    <ClInclude Include="src\wml_formula_callable.hpp" />
+    <ClInclude Include="src\wml_modify.hpp" />
+    <ClInclude Include="src\wml_node.hpp" />
+    <ClInclude Include="src\wml_node_fwd.hpp" />
+    <ClInclude Include="src\wml_parser.hpp" />
+    <ClInclude Include="src\wml_preprocessor.hpp" />
+    <ClInclude Include="src\wml_schema.hpp" />
+    <ClInclude Include="src\wml_utils.hpp" />
+    <ClInclude Include="src\wml_value.hpp" />
+    <ClInclude Include="src\wml_writer.hpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
