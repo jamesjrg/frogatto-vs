@@ -189,7 +189,11 @@ namespace preferences {
 
 	bool setup_preferences_dir()
 	{
+		#ifndef _WIN32
 		return !sys::get_dir(user_data_path()).empty();
+		#else
+		return true;
+		#endif
 	}
 
 	void set_preferences_path(const std::string& path)
