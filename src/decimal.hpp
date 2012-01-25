@@ -2,11 +2,7 @@
 #define DECIMAL_HPP_INCLUDED
 
 #include <iosfwd>
-#ifdef _MSC_VER
-#include <boost/cstdint.hpp>
-#else
-#include <inttypes.h>
-#endif
+#include <cstdint>
 
 static const int DECIMAL_PRECISION = 1000;
 

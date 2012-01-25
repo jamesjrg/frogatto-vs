@@ -1,9 +1,5 @@
 #include <boost/array.hpp>
-#ifdef _MSC_VER
-#include <boost/cstdint.hpp>
-#else
-#include <inttypes.h>
-#endif
+#include <cstdint>
 #include <iostream>
 #include <cassert>
 

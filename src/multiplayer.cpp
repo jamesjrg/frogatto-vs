@@ -1,11 +1,7 @@
 #include <sstream>
 #include <string>
 
-#ifdef _MSC_VER
-#include <boost/cstdint.hpp>
-#else
-#include <inttypes.h>
-#endif
+#include <cstdint>
 #include <numeric>
 #include <stdio.h>
 
